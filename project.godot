@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="StateMachine"
+config/tags=PackedStringArray("plugin")
+config/features=PackedStringArray("4.2", "Mobile")
+
+[editor]
+
+script/templates_search_path="res://script_templates/"
+
+[file_customization]
+
+folder_colors={
+"res://StateMachine/": "red",
+"res://script_templates/": "gray"
+}
+
+[rendering]
+
+renderer/rendering_method="mobile"
