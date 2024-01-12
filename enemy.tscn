@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyhxfsxvwidof"]
-
-[ext_resource type="Script" path="res://StateMachine/state_machine.gd" id="1_h14fq"]
-
-[node name="Enemy" type="Node2D"]
-
-[node name="StateMachine" type="Node" parent="."]
-script = ExtResource("1_h14fq")
