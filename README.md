@@ -38,7 +38,7 @@ To add the State to the State Machine, create a new Node of the State you just m
 
 ## Transitioning to other States
 
-To transition to other States on the State Machine, make sure there are more than one State as a child of the State machine.
+To transition to other States on the State Machine, make sure there are more than one State as a child of the State Machine.
 
 To transition to another State, you can use the `Transitioned` signal (signal inside State script)...
 
