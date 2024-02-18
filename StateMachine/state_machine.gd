@@ -36,7 +36,7 @@ func on_state_transitioned(state : State, new_state_name : String) -> void:
 		printerr("Current state is null, cannot transition")
 		return
 	
-	var new_state : State = states[new_state_name]
+	var new_state : State = states[new_state_name.to_lower()]
 	if !new_state: 
 		printerr("Transition state name does not match a state's name")
 	
