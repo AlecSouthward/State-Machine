@@ -2,6 +2,7 @@ extends Node
 class_name State
 
 signal Transitioned
+var active := false
 
 func enter() -> void: pass
 func exit() -> void: pass
