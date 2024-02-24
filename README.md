@@ -5,7 +5,7 @@
 To create the State Machine, simply create a new State Machine Node.
 
 > [!NOTE]
-> To make a starting State for the State Machine, select the State Machine and change the Initial State property
+> To make a starting State for the State Machine, select the State Machine and change the Initial State property.
 
 ## Creating a State
 
@@ -17,20 +17,21 @@ class_name STATE_NAME # Your state's name
 
 # Runs when the state is entered
 func enter():
-	pass
+    pass
 
 # Runs when the state is exited
 func exit():
-	pass
+    pass
 
 # Updates every _process() update (When state is active)
 func update():
-	pass
+    pass
 
 # Updates every _physics_process() update (When state is active)
 func physics_update():
-	pass
+    pass
 ```
+
 > [!WARNING]
 > If you do not specify a class name for your state, you will be unable to create a node of the State.
 
@@ -46,6 +47,24 @@ To transition to another State, you can use the `Transitioned` signal (signal in
 # (CURRENT_STATE, NEXT_STATE_NAME)
 Transitioned.emit(self, "EnemyIdle")
 ```
+
+## Checking if State is Active
+
+If you need to check if a state is active while inside of the state, for example, inside the EnemyIdle state you are checking the `_on_area_entered():` (you might already be getting an 'Cannot change state from a non-active state') you can use the `active` boolean included inside the State class to check if the state is currently active.
+
+```gdscript
+# Instead of doing this...
+func area_entered(area):
+    # Code here
+
+# Do this...
+func area_entered(area):
+    if active:
+        # Code here
+```
+
+> [!NOTE]
+> This applies to any functions that could run at anytime (such as `area_entered`, `area_exited`, etc).
 
 # Support
 
