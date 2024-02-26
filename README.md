@@ -68,4 +68,4 @@ func area_entered(area):
 
 # Support
 
-If you have any issues, create an [Issue](https://github.com/AlecSouthward/state-machine/issues/new) or message me on Discord at `itsmealec`.
+If you have any issues, create an [Issue](https://github.com/AlecSouthward/State-Machine/issues/new) or message me on Discord at `itsmealec`.
