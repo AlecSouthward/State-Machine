@@ -44,6 +44,7 @@ func on_state_transitioned(state : State, new_state_name : String) -> void:
 	if current_state:
 		current_state.exit()
 		new_state.active = false
+		current_state.active = false
 	
 	new_state.enter()
 	new_state.active = true
